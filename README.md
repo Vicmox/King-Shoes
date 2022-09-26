@@ -1,6 +1,6 @@
 # King-Shoes 👑👟
 
-King shoes es un aplicativo web que consiste en una venta de zapatos con todas las marcas reconocidas a nivel nacional en zapatos
+Es una tienda virtual especializada en la venta de productos en inventario o disposición a elegir por los clientes, tales como cuantos quiere agregar, permitir ver los productos variados en calzados marcas y sus precios y/o descuentos así como mostrar otra informacion para los visitantes o clientes sobre la tienda, contactos o marcas asociadas de forma cómoda, así como permitir a sus funcionarios la administración de los productos mostrados e inventario
 
 ## Instalación
 
