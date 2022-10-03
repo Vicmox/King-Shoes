@@ -3,6 +3,17 @@
     padding: 0%;
     
 }
+h1{
+  text-align: center;
+}
+.filtro{
+  display: inline-block;
+  position: fixed;
+}
+.btn-primary{
+  align-items: center;
+  text-align: center;
+}
 
 .publicidad{
     position: relative;
