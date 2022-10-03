@@ -1,11 +1,11 @@
 $("#login").click(function(event){
     $("#contenedor").load('loginyregister.html')
 });
-$('.carousel').carousel({
-    interval: 2000
-  });
 
-  $('.carousel').carousel();
+$("#hombre").click(function(event){
+    $("#contenedor").load('cuenta/categoria.html')
+});
+
   
 
 
