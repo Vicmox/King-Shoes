@@ -1,0 +1,17 @@
+.scrollable0panel{
+    max-height: 300px;
+    overflow: auto;
+}
+#productos{
+    height: 50vh;
+    overflow-y: scroll;
+
+}
+#total{
+    font-weight: bold;
+    font-size: 15px;
+    height: 500px;
+    width: 800px;
+    background-color: aqua;
+
+}
