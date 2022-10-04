@@ -27,7 +27,7 @@ function agregar_producto() {
         }
     );
     var id_row = 'row' + cant;
-    var fila = '<tr id=' + id_row + '><td>' + nombre + '</td><td>' + precio + '</td><td>' + cantidad + '</td><td>' + total + '</td><td><a hrf="#" class="btn btn-danger" onclick"eliminar('
+    var fila = '<tr id=' + id_row + '><td>' + nombre + '</td><td>' + precio + '</td><td>' + cantidad + '</td><td>' + total + '</td><td><a hrf="#" class="btn btn-danger" onclick="eliminar('
         + cant + ')";>Eliminar</a><a href"#" class="btn btn-warning" onclick="cantidad(' + cant + ')";>Cantidad</a></td></tr>';
 
     $("#lista").append(fila);
@@ -36,11 +36,33 @@ function agregar_producto() {
     $("#cantidad").val('');
     $("#nombre").focus();
     cant++;
+    sumar();
 
 }
 function save() {
 
 }
+function sumar(){
+    var tot=0;
+    for(x of data){
+        tot=tot+x.total;
+        document.getElementById('total').innerHTML="total "+tot;
+    }
+}
+function eliminar(row){
+    $("#row"+row).remove();
+    var i=0;
+    var pos=0;
+    for(x of data){
+        if(x.id==row){
+            pos=i;
+        }
+        i++;
+    }
+    data.splice(pos,1);
+    sumar();
+}
+ 
 
 
   
