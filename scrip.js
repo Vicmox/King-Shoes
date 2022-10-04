@@ -62,6 +62,16 @@ function eliminar(row){
     data.splice(pos,1);
     sumar();
 }
+function cantidad(row){
+    var canti=parseFloat(prompt("Nueva Cantidad"));
+    data[row].cantidad=canti;
+    data[row].total=data[row].cantidad*data[row].precio;
+    var filaid=document.getElementById("row"+row);
+    celda=filaid.getElementsByTagName('td');
+    celda[2].innerHTML=canti;
+    celda[3].innerHTML=data[row].total;
+    sumar();
+}
  
 
 
