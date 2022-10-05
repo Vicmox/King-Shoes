@@ -24,6 +24,18 @@ h1{
     color: white;
 
 }
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.col_carrusel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
 .productos{
     width: auto;
     height: 800px;
