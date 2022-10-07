@@ -85,3 +85,27 @@ p{
 #menuBuscar a{
  text-decoration: none;
 }
+
+#confirmarContraseñaDiv{
+  display: none;
+}
+
+#nombresDiv{
+  display: none;
+}
+
+#apellidosDiv{
+  display: none;
+}
+
+#btnRegistrarme{
+  display: none;
+}
+
+#btnCambioInicioSesion{
+  display: none;
+}
+#ulCuentaYContraseñaDiv{
+  text-decoration: none;
+  list-style-type: none; 
+}

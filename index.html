@@ -117,32 +117,46 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Iniciar Sesion</h5>
+                <h5 class="modal-title" id="textIniciarSesion">Iniciar Sesion</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <form>
-                  <div class="mb-3">
+                  <div class="mb-3" id="nombresDiv">
+                    <label for="inputNombre" class="form-label" id="nombres">Nombres</label>
+                    <input class="form-control" id="inputNombre">
+                  </div>
+                  <div class="mb-3" id="apellidosDiv">
+                    <label for="inputApellidos" class="form-label" id="apellidos">Apellidos</label>
+                    <input type="password" class="form-control" id="inputApellidos">
+                  </div>
+                  <div class="mb-3" id="correoElectronicoDiv">
                     <label for="exampleInputEmail1" class="form-label">Correo Electronico </label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <div id="emailHelp" class="form-text"><span style="color: orange;">We'll never share your email with anyone else.</span></div>
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  <div class="mb-3" id="contraseñaDiv">
+                    <label for="inputContraseña" class="form-label" id="contraseña">Contraseña</label>
+                    <input type="password" class="form-control" id="inputContraseña">
+                  </div>
+                  <div class="mb-3" id="confirmarContraseñaDiv">
+                    <label for="inputConfirmarContraseña" class="form-label" id="confirmarContraseña">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" id="inputConfirmarContraseña">
                   </div>
                   <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Recordarme</label>
                   </div>
                   <button type="submit" class="btn btn-primary" id="btnEntrar">Entrar</button>
-                  <button type="submit" class="btn btn-primary" id="registrarse">Registrarme</button>
-
-
+                  <button type="submit" class="btn btn-primary" id="btnRegistrarme">Registrarme</button>
                 </form>
               </div>
               <div class="modal-footer">
-                <a href="#">¿Olvidaste tu contraseña?</a>
+                <ul id="ulCuentaYContraseñaDiv">
+                  <li><a href="#">¿Olvidaste tu contraseña?</a></li>
+                  <li><a href="#" type="button" id="btnCambioInicioSesion">Ya tengo cuenta</a></li>
+                  <li><a href="#" type="button" id="btnCambioARegistro">No tienes una cuenta? Registrate ya</a></li>
+                </ul>       
               </div>
             </div>
           </div>
