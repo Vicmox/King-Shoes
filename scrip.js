@@ -45,7 +45,9 @@ btnCambioInicioSesion.onclick=function(){
     btnCambioARegistro.style.display="block";
 }
 $("#cuentaAdmin").click(function(event){
-    $("#contenedor").load('cuenta/admin.html')
+   $("#contenedor").load('cuenta/admin.html')
+   $("#menu").load('cuenta/menuAdmin.html')
+
 });
 var boton = document.getElementById('agregar_p');
 var guardar = document.getElementById('guardar');
@@ -54,6 +56,7 @@ var data = [];
 var cant = 0;
 boton.addEventListener("click", agregar_producto);
 guardar.addEventListener("click", save);
+
 function agregar_producto() {
     var nombre = document.getElementById('nombre').value;
     var precio = parseFloat(document.getElementById('precio').value);

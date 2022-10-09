@@ -7,6 +7,9 @@
     overflow-y: scroll;
 
 }
+h4{
+    color: rgb(255, 255, 255);
+}
 #total{
     font-weight: bold;
     font-size: 15px;

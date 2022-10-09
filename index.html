@@ -15,14 +15,16 @@
 
 <body>
   <!--Menu-->
-  <nav class="navbar navbar-expand-lg bg-light" id="nav">
+  
+  <div id="menu" >
+  <nav class="navbar navbar-expand-lg bg-dark "  id="nav">
 
     <div class="container">
       <!--Logo -->
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.html"   >
         <img src="img/logo.jpg" alt="Logo" width="50" height="35" class="d-inline-block align-text-top"
-          id="logo_inicio">
-        King Shoes</a>
+          id="logo_inicio"> <h4> King Shoes</h4>
+       </a>
       <!--Boton mediaQuery-->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,16 +60,25 @@
         <!--Boton buscador-->
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Ej: puma" aria-label="Search">
-          <button class="btn " type="submit"><img src="img/logoBuscar.jpg" alt="Logo" width="50" height="35"
-              class="d-inline-block align-text-top" id="logo_inicio"></button>
+         
+            <a class="nav " href="#" role="button" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="35" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+            </a> 
+            
         </form>
         <!--Boton Cuenta-->
         <ul class="nav">
           <li class="nav-item dropdown">
+            
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="img/login.jpg" alt="Logo" width="50" height="35" class="d-inline-block align-text-top"
-                id="logo_inicio">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="35" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" >
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>
             </a>
+            
             <ul class="dropdown-menu">
               <li>
                 <button type="button" class="btn  btn-default" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -96,12 +107,15 @@
               
             </ul>
           </li>
+         <!--Boton Carrito--> 
           <li class="nav-item">
-            <button type="button " class="btn">
-            <a class="navbar-brand" href="index.html" class="btn btn-primary">
-              <img src="img/carrito.jpg" alt="Logo" width="50" height="35" class="d-inline-block align-text-top"
-                id="logo_inicio">
+            <a class="nav-link " href="#" role="button" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="35" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+              </svg>
             </a>
+            
+            
           </button>
           </li>
 
@@ -112,68 +126,62 @@
 
 
         <!-- Modal -->
+        
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="textIniciarSesion">Iniciar Sesion</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <div class="mb-3" id="nombresDiv">
-                    <label for="inputNombre" class="form-label" id="nombres">Nombres</label>
-                    <input class="form-control" id="inputNombre">
-                  </div>
-                  <div class="mb-3" id="apellidosDiv">
-                    <label for="inputApellidos" class="form-label" id="apellidos">Apellidos</label>
-                    <input type="password" class="form-control" id="inputApellidos">
-                  </div>
-                  <div class="mb-3" id="correoElectronicoDiv">
-                    <label for="exampleInputEmail1" class="form-label">Correo Electronico </label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text"><span style="color: orange;">We'll never share your email with anyone else.</span></div>
-                  </div>
-                  <div class="mb-3" id="contraseñaDiv">
-                    <label for="inputContraseña" class="form-label" id="contraseña">Contraseña</label>
-                    <input type="password" class="form-control" id="inputContraseña">
-                  </div>
-                  <div class="mb-3" id="confirmarContraseñaDiv">
-                    <label for="inputConfirmarContraseña" class="form-label" id="confirmarContraseña">Confirmar Contraseña</label>
-                    <input type="password" class="form-control" id="inputConfirmarContraseña">
-                  </div>
-                  <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-                  </div>
-                  <button type="submit" class="btn btn-primary" id="btnEntrar">Entrar</button>
-                  <button type="submit" class="btn btn-primary" id="btnRegistrarme">Registrarme</button>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <ul id="ulCuentaYContraseñaDiv">
-                  <li><a href="#">¿Olvidaste tu contraseña?</a></li>
-                  <li><a href="#" type="button" id="btnCambioInicioSesion">Ya tengo cuenta</a></li>
-                  <li><a href="#" type="button" id="btnCambioARegistro">No tienes una cuenta? Registrate ya</a></li>
-                </ul>       
-              </div>
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="textIniciarSesion">Iniciar Sesion</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3" id="nombresDiv">
+                  <label for="inputNombre" class="form-label" id="nombres">Nombres</label>
+                  <input class="form-control" id="inputNombre">
+                </div>
+                <div class="mb-3" id="apellidosDiv">
+                  <label for="inputApellidos" class="form-label" id="apellidos">Apellidos</label>
+                  <input type="password" class="form-control" id="inputApellidos">
+                </div>
+                <div class="mb-3" id="correoElectronicoDiv">
+                  <label for="exampleInputEmail1" class="form-label">Correo Electronico </label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text"><span style="color: orange;">We'll never share your email with anyone else.</span></div>
+                </div>
+                <div class="mb-3" id="contraseñaDiv">
+                  <label for="inputContraseña" class="form-label" id="contraseña">Contraseña</label>
+                  <input type="password" class="form-control" id="inputContraseña">
+                </div>
+                <div class="mb-3" id="confirmarContraseñaDiv">
+                  <label for="inputConfirmarContraseña" class="form-label" id="confirmarContraseña">Confirmar Contraseña</label>
+                  <input type="password" class="form-control" id="inputConfirmarContraseña">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btnEntrar">Entrar</button>
+                <button type="submit" class="btn btn-primary" id="btnRegistrarme">Registrarme</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <ul id="ulCuentaYContraseñaDiv">
+                <li><a href="#">¿Olvidaste tu contraseña?</a></li>
+                <li><a href="#" type="button" id="btnCambioInicioSesion">Ya tengo cuenta</a></li>
+                <li><a href="#" type="button" id="btnCambioARegistro">No tienes una cuenta? Registrate ya</a></li>
+              </ul>       
             </div>
           </div>
-          
         </div>
-        <!--Boton carrito-->
         
-
-
-
       </div>
-
-
-
-    </div>
+      </div>
+    
 
   </nav>
+  </div>
 
 
   <!--Contenedor  Body-->
@@ -319,6 +327,7 @@
     <div class="container">
       <!--col-1/2-->
       <div class="row ">
+        
         <div class="col">
           <div class="abs-center">
           <div class="card" style="width: 18rem;">
@@ -473,6 +482,13 @@
         </div>
       </div>
     </div>
+   
+ 
+    <span class="d-block p-2 text-bg-primary">NUESTRAS TIENDAS</span>
+   
+
+ </div>
+    
 
     <!--Boton de Siguiente pagina-->
     <br>
@@ -501,12 +517,14 @@
   </div>
 
   <!--footer-->
+ 
   <footer class="footer" >
 
+    
     <div class="container">
       <p class="text-muted">King Shoes Ventas Online</p>
     </div>
-
+    
 
   </footer>
 
