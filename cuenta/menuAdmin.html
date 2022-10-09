@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+        <nav class="navbar navbar-expand-lg bg-light" id="nav">
+
+            <div class="container">
+              <!--Logo -->
+              <a class="navbar-brand" href="index.html">
+                <img src="img/logo.jpg" alt="Logo" width="50" height="35" class="d-inline-block align-text-top"
+                  id="logo_inicio">
+                King Shoes</a>
+              <!--Boton mediaQuery-->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!--Botones-->
+        
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+                <ul class="nav ">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" id="hombre">USUARIOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">TIENDAS</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      PEDIDOS
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Activos</a></li>
+                      <li><a class="dropdown-item" href="#">Terminados</a></li>
+                      <li><a class="dropdown-item" href="#">Incompletos</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">Ver todo</a></li>
+                    </ul>
+                  </li>
+        
+        
+                </ul>
+                
+                <!--Boton Cuenta-->
+                <ul class="nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="img/login.jpg" alt="Logo" width="50" height="35" class="d-inline-block align-text-top"
+                        id="logo_inicio">
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <button type="button" class="btn  btn-default" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                          <a class="dropdown-item" href="#">Mi Cuenta</a>
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button " class="btn"><a class="dropdown-item" href="#">Productos </a></button>
+                        
+                      </li>
+                      <li>
+                        <button type="button " class="btn"><a class="dropdown-item" href="#">Mis Pedidos </a></button>
+                        
+                      </li>
+                      <li>
+                        <button type="button " class="btn"><a class="dropdown-item" href="#" id="cuentaAdmin">Admin </a></button>
+                        
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li>
+                        <button type="button " class="btn"><a class="dropdown-item" href="#">Cerrar Sesion </a></button>
+                        
+                      </li>
+                      
+                    </ul>
+                  </li>
+
+                  
+        
+        
+                </ul>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                  </svg>
+        
+                <!--Boton registrar-->
+        
+        
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="textIniciarSesion">Iniciar Sesion</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3" id="nombresDiv">
+                            <label for="inputNombre" class="form-label" id="nombres">Nombres</label>
+                            <input class="form-control" id="inputNombre">
+                          </div>
+                          <div class="mb-3" id="apellidosDiv">
+                            <label for="inputApellidos" class="form-label" id="apellidos">Apellidos</label>
+                            <input type="password" class="form-control" id="inputApellidos">
+                          </div>
+                          <div class="mb-3" id="correoElectronicoDiv">
+                            <label for="exampleInputEmail1" class="form-label">Correo Electronico </label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text"><span style="color: orange;">We'll never share your email with anyone else.</span></div>
+                          </div>
+                          <div class="mb-3" id="contraseñaDiv">
+                            <label for="inputContraseña" class="form-label" id="contraseña">Contraseña</label>
+                            <input type="password" class="form-control" id="inputContraseña">
+                          </div>
+                          <div class="mb-3" id="confirmarContraseñaDiv">
+                            <label for="inputConfirmarContraseña" class="form-label" id="confirmarContraseña">Confirmar Contraseña</label>
+                            <input type="password" class="form-control" id="inputConfirmarContraseña">
+                          </div>
+                          <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                          </div>
+                          <button type="submit" class="btn btn-primary" id="btnEntrar">Entrar</button>
+                          <button type="submit" class="btn btn-primary" id="btnRegistrarme">Registrarme</button>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <ul id="ulCuentaYContraseñaDiv">
+                          <li><a href="#">¿Olvidaste tu contraseña?</a></li>
+                          <li><a href="#" type="button" id="btnCambioInicioSesion">Ya tengo cuenta</a></li>
+                          <li><a href="#" type="button" id="btnCambioARegistro">No tienes una cuenta? Registrate ya</a></li>
+                        </ul>       
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!--Boton carrito-->
+                
+        
+        
+        
+              </div>
+        
+        
+        
+            </div>
+        
+          </nav>
+
+    </div>
+
+      <script src="scrip.js"></script>
+    
+</body>
+</html>
