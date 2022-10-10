@@ -45,12 +45,9 @@ btnCambioInicioSesion.onclick=function(){
     btnCambioARegistro.style.display="block";
 }
 $("#cuentaAdmin").click(function(event){
-   $("#contenedor").load('cuenta/admin.html')
-   $("#menu").load('cuenta/menuAdmin.html')
-
+    $("#contenedor").load('cuenta/admin.html')
+    $("#menu").load('cuenta/menuAdmin.html')
 });
-
-
 var boton = document.getElementById('agregar_p');
 var guardar = document.getElementById('guardar');
 var lista = document.getElementById('lista');
@@ -119,12 +116,6 @@ function cantidad(row){
     celda[3].innerHTML=data[row].total;
     sumar();
 }
-
-const myCarouselElement = document.querySelector('#carouselExampleDark')
-const carousel = new bootstrap.Carousel(myCarouselElement, {
-  interval: 100,
-  wrap: false
-})
 
 
 
