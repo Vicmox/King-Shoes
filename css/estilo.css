@@ -3,6 +3,12 @@
     padding: 0%;
     
 }
+
+h4{
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  
+}
 h1{
   text-align: center;
 }
@@ -12,6 +18,9 @@ h1{
 }
 .btn-primary{
   align-items: center;
+  text-align: center;
+}
+span{
   text-align: center;
 }
 
@@ -65,6 +74,7 @@ body {
     padding-top: 0px;
     overflow: visible;
   }
+
   
   .footer {
     border-top: 1px solid #222;
@@ -108,4 +118,7 @@ p{
 #ulCuentaYContraseñaDiv{
   text-decoration: none;
   list-style-type: none; 
+}
+.publicidad_tienda{
+  display: inline-block;
 }
