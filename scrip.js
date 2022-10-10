@@ -48,6 +48,10 @@ $("#cuentaAdmin").click(function(event){
     $("#contenedor").load('cuenta/admin.html')
     $("#menu").load('cuenta/menuAdmin.html')
 });
+$("#cuentaTienda").click(function(event){
+    $("#contenedor").load('tienda/tienda.html')
+    $('#menu').load('tienda/menuTienda.html')
+});
 var boton = document.getElementById('agregar_p');
 var guardar = document.getElementById('guardar');
 var lista = document.getElementById('lista');
