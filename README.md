@@ -20,3 +20,6 @@ Puedes crear un pull request al proyecto
 ## Licencia
 
 Victor Monsalvo 1151801 
+Ciro Quintero   1152005
+william montes  1151261
+Neider Simarra  1151896
