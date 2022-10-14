@@ -9,9 +9,9 @@ Puedes instalarlo clonando el repositorio
 `$ git clone https://github.com/Vicmox/King-Shoes.git`
 
 ## Cómo se usa
+El usuario que se registra para comprar , puede navegar por las categorías disponibles, escoger productos, armar su carrito y completar un pedido.
+El usuario que crea su perfil de tienda  puede subir y ofrecer sus artículos  en la página 
 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus nunc nec posuere efficitur. Quisque pellentesque odio eget commodo hendrerit. Nullam ut urna id magna fringilla varius. Pellentesque nisi purus, ultrices at massa nec, aliquam rhoncus nisi. Mauris suscipit sapien ut imperdiet tincidunt. In at nisi tellus. Pellentesque ornare pharetra nulla, eget viverra turpis laoreet at. Nunc sit amet volutpat dui.
 
 ## Cómo contribuir
 
