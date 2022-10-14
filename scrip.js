@@ -9,9 +9,9 @@ btnCambioARegistro.onclick=function(){
     let confirmarContraseñaDiv = document.getElementById('confirmarContraseñaDiv');
     confirmarContraseñaDiv.style.display = "block";
     let nombresDiv = document.getElementById('nombresDiv');
-    nombresDiv.style.display="block";
+    nombresDiv.style.display="inline-block";
     let apellidosDiv = document.getElementById('apellidosDiv');
-    apellidosDiv.style.display="block";
+    apellidosDiv.style.display="inline-block";
     let btnEntrar = document.getElementById('btnEntrar');
     btnEntrar.style.display="none";
     let btnRegistrarme = document.getElementById('btnRegistrarme');
@@ -62,7 +62,7 @@ $("#mujer").click(function(event){
 $("#niño").click(function(event){
     $("#contenedor").load('categoria/categoria.html')
 })
-$("#niña").click(function(event){
+$("#hombre").click(function(event){
     $("#contenedor").load('categoria/categoria.html')
 })
 
@@ -78,10 +78,10 @@ function agregar_producto() {
     var nombre = document.getElementById('nombre').value;
     var precio = parseFloat(document.getElementById('precio').value);
     var cantidad = parseFloat(document.getElementById('cantidad').value);
-    var color = parseFloat(document.getElementById('color').value);
+    var color = document.getElementById('color').value;
     var talla = parseFloat(document.getElementById('talla').value);
 
-    if(cantidad>0){
+    if(cantidad>=0){
     var total = precio * cantidad;
     data.push(
         {
