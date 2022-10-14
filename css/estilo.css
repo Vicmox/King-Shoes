@@ -24,21 +24,30 @@ span{
   text-align: center;
 }
 
-.publicidad{
-    position: relative;
-    text-align: center;
-    width: auto;
-    height: 25px;
-    background-color:blue;
-    color: white;
 
+.col{
+  padding-bottom: 50px;
 }
+#btnEntrar{
+  text-align: center;
+  
+  border-radius: 2pc;
+}
+#btnCambioARegistro{
+  text-align: center;
+  
+  border-radius: 2pc;
+}
+
+
 .abs-center {
   display: flex;
   align-items: center;
   justify-content: center;
  
 }
+
+
 .col_carrusel{
   display: flex;
   align-items: center;
