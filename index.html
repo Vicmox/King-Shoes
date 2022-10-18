@@ -147,6 +147,7 @@
           <!-- Modal -->
 
           <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+
           aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -194,6 +195,54 @@
                   <li><a href="#" type="button" id="btnCambioARegistro">No tienes una cuenta? Registrate ya</a></li>
                   <li><a href="#" type="button" id="btnCambioInicioSesion">Ya tengo cuenta</a></li>
                 </ul>
+=======
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="textIniciarSesion">Iniciar Sesion</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3" id="nombresDiv">
+                      <label for="inputNombre" class="form-label" id="nombres">Nombres</label>
+                      <input class="form-control" id="inputNombre">
+                    </div>
+                    <div class="mb-3" id="apellidosDiv">
+                      <label for="inputApellidos" class="form-label" id="apellidos">Apellidos</label>
+                      <input type="password" class="form-control" id="inputApellidos">
+                    </div>
+                    <div class="mb-3" id="correoElectronicoDiv">
+                      <label for="exampleInputEmail1" class="form-label">Correo Electronico </label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                      <div id="emailHelp" class="form-text"><span style="color: orange;">We'll never share your email
+                          with anyone else.</span></div>
+                    </div>
+                    <div class="mb-3" id="contraseñaDiv">
+                      <label for="inputContraseña" class="form-label" id="contraseña">Contraseña</label>
+                      <input type="password" class="form-control" id="inputContraseña" required>
+                    </div>
+                    <div class="mb-3" id="confirmarContraseñaDiv">
+                      <label for="inputConfirmarContraseña" class="form-label" id="confirmarContraseña">Confirmar
+                        Contraseña</label>
+                      <input type="password" class="form-control" id="inputConfirmarContraseña">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btnEntrar">Entrar</button>
+                    <button type="submit" class="btn btn-primary" id="btnRegistrarme">Registrarme</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <ul id="ulCuentaYContraseñaDiv">
+                    <li><a href="#">¿Olvidaste tu contraseña?</a></li>
+                    <li><a href="#" type="button" id="btnCambioInicioSesion">Ya tengo cuenta</a></li>
+                    <li><a href="#" type="button" id="btnCambioARegistro">No tienes una cuenta? Registrate ya</a></li>
+                  </ul>
+>>>>>>> ff0cd814e98cd3f75e43897f41761daa19768b01
                 </div>
               </div>
             </div>
