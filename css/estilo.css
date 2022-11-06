@@ -88,8 +88,11 @@ body {
   .footer {
     border-top: 1px solid #222;
     padding-bottom: auto;
-    margin-block-start: 30%;
-    margin-bottom: 0em;
+    margin-block-start: 7cm;
+    margin-bottom: 100px;
+    
+    padding-top: 1.7cm;
+    position: absolute;
    
   }
   
