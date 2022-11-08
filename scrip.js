@@ -9,9 +9,9 @@ btnCambioARegistro.onclick=function(){
     let confirmarContraseñaDiv = document.getElementById('confirmarContraseñaDiv');
     confirmarContraseñaDiv.style.display = "block";
     let nombresDiv = document.getElementById('nombresDiv');
-    nombresDiv.style.display="block";
+    nombresDiv.style.display="inline-block";
     let apellidosDiv = document.getElementById('apellidosDiv');
-    apellidosDiv.style.display="block";
+    apellidosDiv.style.display="inline-block";
     let btnEntrar = document.getElementById('btnEntrar');
     btnEntrar.style.display="none";
     let btnRegistrarme = document.getElementById('btnRegistrarme');
@@ -48,10 +48,24 @@ $("#cuentaAdmin").click(function(event){
     $("#contenedor").load('cuenta/admin.html')
     $("#menu").load('cuenta/menuAdmin.html')
 });
+
 $("#cuentaTienda").click(function(event){
     $("#contenedor").load('tienda/tienda.html')
-    $('#menu').load('tienda/menuTienda.html')
+    $("#menu").load('tienda/menuTienda.html')
 });
+$("#hombre").click(function(event){
+    $("#contenedor").load('categoria/categoria.html')
+})
+$("#mujer").click(function(event){
+    $("#contenedor").load('categoria/categoria.html')
+})
+$("#niño").click(function(event){
+    $("#contenedor").load('categoria/categoria.html')
+})
+$("#hombre").click(function(event){
+    $("#contenedor").load('categoria/categoria.html')
+})
+
 var boton = document.getElementById('agregar_p');
 var guardar = document.getElementById('guardar');
 var lista = document.getElementById('lista');
@@ -64,27 +78,42 @@ function agregar_producto() {
     var nombre = document.getElementById('nombre').value;
     var precio = parseFloat(document.getElementById('precio').value);
     var cantidad = parseFloat(document.getElementById('cantidad').value);
+    var color = document.getElementById('color').value;
+    var talla = parseFloat(document.getElementById('talla').value);
 
+    if(cantidad>=0){
     var total = precio * cantidad;
     data.push(
         {
             "id": cant,
             "nombre": precio,
             "cantidad": cantidad,
-            "total": total
+            "total": total,
+            "color":color,
+            "talla":talla
+
         }
     );
     var id_row = 'row' + cant;
-    var fila = '<tr id=' + id_row + '><td>' + nombre + '</td><td>' + precio + '</td><td>' + cantidad + '</td><td>' + total + '</td><td><a hrf="#" class="btn btn-danger" onclick="eliminar('
+    var fila = '<tr id=' + id_row + '><td>' + nombre + '</td><td>' + precio + '</td><td>' + cantidad + '</td><td>'+color+'</td><td>'+talla+'</td><td>' + total + '</td><td><a hrf="#" class="btn btn-danger" onclick="eliminar('
         + cant + ')";>Eliminar</a><a href"#" class="btn btn-warning" onclick="cantidad(' + cant + ')";>Cantidad</a></td></tr>';
+
+      
 
     $("#lista").append(fila);
     $("#nombre").val('');
     $("#precio").val('');
     $("#cantidad").val('');
+    $("#color").val('');
+    $("#talla").val('');
+    
     $("#nombre").focus();
     cant++;
     sumar();
+    }else{
+        alert("Informacion Incompleta")
+    }
+    
 
 }
 function save() {
