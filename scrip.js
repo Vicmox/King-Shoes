@@ -1,4 +1,20 @@
 
+const usuarios=document.querySelector("#Usuarios");
+
+$("#Usuarios").click(function(event){
+    
+    
+     
+   
+});
+
+
+
+
+
+
+
+
 //Este boton hace que el formulario de registro aparezca en vez del de inicio de sesion
 
 var btnCambioARegistro = document.getElementById('btnCambioARegistro');
@@ -65,7 +81,7 @@ $("#niño").click(function(event){
 $("#hombre").click(function(event){
     $("#contenedor").load('categoria/categoria.html')
 })
-
+/*
 var boton = document.getElementById('agregar_p');
 var guardar = document.getElementById('guardar');
 var lista = document.getElementById('lista');
@@ -152,4 +168,4 @@ function cantidad(row){
 
 
 
-
+*/
