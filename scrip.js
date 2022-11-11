@@ -65,6 +65,9 @@ $("#niño").click(function(event){
 $("#hombre").click(function(event){
     $("#contenedor").load('categoria/categoria.html')
 })
+$("#carrito").click(function(event){
+    $("#contenedor").load('carrito/carrito.html')
+})
 
 var boton = document.getElementById('agregar_p');
 var guardar = document.getElementById('guardar');
