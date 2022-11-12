@@ -1,7 +1,5 @@
 
-function mostraFormuralioRegistro(){
-    document.getElementById('fromInicio').style.display='block'
-}
+
 
 $("#usuarios").click(function(event){
     fetch('http://localhost:8080/usuarios/lista')
@@ -21,39 +19,6 @@ $("#usuarios").click(function(event){
 })
 
 
-const guardar=document.getElementById('btnRegistrarU')
 
-var select=document.getElementById("inlineFormSelectPref");
-var value=select.value;
-var sexo=select.options[select.selectedIndex].text;
-
-guardar.addEventListener('click',()=>{
-    var cedula=document.getElementById("inputCedula").value;
-    var nombre=document.getElementById("inputNombre").value;
-    var apellido=document.getElementById('inputApellidos').value;
-    var correo=document.getElementById('inputEmail').value;
-    var contraseña=document.getElementById('inputPassword').value;
-    const newUser={
-        cedula: cedula,
-        nombre: nombre,
-        apellido:apellido,
-        correo:correo,
-        contraseña:contraseña,
-        sexo:sexo,
-
-        estado:'activo',
-        idrol:'1'
-    }
-    fetch('http://localhost:8080/usuarios',{
-        method:'POST',
-        body:JSON.stringify(newUser),
-        headers:{
-            "Content-type":"application/json"
-        }
-
-    }).then(res=>res.json())
-    .then(user=>console.log(user))
-    console.log(JSON.stringify(newUser))
-})
 
 
