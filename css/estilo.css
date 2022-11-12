@@ -109,29 +109,10 @@ p{
  text-decoration: none;
 }
 
-#confirmarContraseñaDiv{
-  display: none;
-}
 
-#nombresDiv{
-  display: none;
-}
-
-#apellidosDiv{
-  display: none;
-}
-
-#btnRegistrarme{
-  display: none;
-}
-
-#btnCambioInicioSesion{
-  display: none;
-}
-#ulCuentaYContraseñaDiv{
-  text-decoration: none;
-  list-style-type: none; 
-}
 .publicidad_tienda{
   display: inline-block;
+}
+.fromResgistrar{
+  display: none;
 }

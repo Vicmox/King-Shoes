@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1>FORMULARIO DE REGISTRO</h1>
+        <form  id="fromResgistrar">
+            <div class="row mb-3">
+              
+                <label for="inputCedula" class="col-sm-2 col-form-label">Cedula</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputCedula" required>
+                </div>
+              </div>
+              <div class="row mb-3">
+              <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputNombre" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputApellidos" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+             
+              <label for=" " class="col-sm-2 col-form-label">Genero</label>
+              <div class="col-sm-10">
+              <select class="form-select" id="inlineFormSelectPref">
+                <option value="1" selected>Masculino</option>
+                <option value="2">Femenino</option>
+                <option value="3">Otro</option>
+              </select>
+            </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btnRegistrarU">Registrarme</button>
+          </form>
+    </div>
+    
+</body>
+</html>
