@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container mt-3">
+
+    <div class="col-md-8 offset-md-2">
         <h1>FORMULARIO DE REGISTRO</h1>
         <form  id="fromResgistrar">
             <div class="row mb-3">
@@ -41,6 +42,13 @@
             </div>
             </div>
             <div class="row mb-3">
+              <label for="inputFecha" class="col-sm-2 col-form-label">Fecha  Nacimiento</label>
+              <div class="col-sm-10">
+                <input type="date" class="form-control" id="inputFecha" required>
+                
+              </div>
+            </div>
+            <div class="row mb-3">
               <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-10">
                 <input type="email" class="form-control" id="inputEmail" required>
@@ -69,6 +77,7 @@ guardar.addEventListener('click',()=>{
     var apellido=document.getElementById('inputApellidos').value;
     var correo=document.getElementById('inputEmail').value;
     var contraseña=document.getElementById('inputPassword').value;
+    var fechaNacimiento=document.getElementById('inputFecha').value;
     const newUser={
         cedula: cedula,
         nombre: nombre,
@@ -76,10 +85,12 @@ guardar.addEventListener('click',()=>{
         correo:correo,
         contraseña:contraseña,
         sexo:sexo,
+        fecha:fechaNacimiento,
 
         estado:'activo',
         idrol:'1'
     }
+    console.log(JSON.stringify(newUser))
     fetch('http://localhost:8080/usuarios',{
         method:'POST',
         body:JSON.stringify(newUser),
@@ -89,7 +100,7 @@ guardar.addEventListener('click',()=>{
 
     }).then(res=>res.json())
     .then(user=>console.log(user))
-    console.log(JSON.stringify(newUser))
+    
 })
     </script>
 </body>
