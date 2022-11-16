@@ -62,12 +62,29 @@ $("#mujer").click(function(event){
 $("#niño").click(function(event){
     $("#contenedor").load('categoria/categoria.html')
 })
-$("#hombre").click(function(event){
-    $("#contenedor").load('categoria/categoria.html')
-})
+
 $("#carrito").click(function(event){
     $("#contenedor").load('carrito/carrito.html')
 })
+
+$("#hombre").click(function(event){
+    $("#contenedor").load('productos/hombre.html')
+})
+
+$("#verOrden").click(function(event){
+    $("#contenedor").load('carrito/resumenpedido.html')
+})
+
+$("#agregarProducto").click(function(event){
+    $("#contenedor").load('carrito/carrito.html')
+})
+
+$("#detalle").click(function(event){
+    $("#contenedor").load('productos/detalleproducto.html')
+})
+
+
+
 
 var boton = document.getElementById('agregar_p');
 var guardar = document.getElementById('guardar');

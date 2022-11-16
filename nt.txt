@@ -1,0 +1,30 @@
+<div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c1e7ed0486a64aaebcf5ac3d00b4c433_9366/Tenis_ZX_1K_Boost_Blanco_FY5648_01_standard.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Nombre del producto.</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-success">Ver producto</a>
+        </div>
+      </div>
+    </div>
+    <div>
+
+
+      <div class="col d-flex justify-content-center-mb-4">
+        <div class="card shadow mb-1 bg-dark-rounded" style="width:20rem">
+            <h5 class="card-title pt-3 text-center">Adidas Runner</h5>
+            <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c1e7ed0486a64aaebcf5ac3d00b4c433_9366/Tenis_ZX_1K_Boost_Blanco_FY5648_01_standard.jpg" class="img-fluid card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text description">Some quick example text to build on the card title and make up the bulk of the card&#39;s content.</p>
+              <h5 class="text-primary"> Precio : <span class="precio"> $140.000</span></h5>
+              <div class="d-grid gap-2">
+              <button class="btn btn-primary " id="detalle">Ver</button>
+              <button class="btn btn-primary " id="agregarProducto">Agregar al carrito
+              </button>
+            </div>
+            </div>
+          </div>
+    </div>
+    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3"></div>
