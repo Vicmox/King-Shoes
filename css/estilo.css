@@ -3,6 +3,9 @@
     padding: 0%;
     
 }
+h5{
+  text-align: center;
+}
 
 h4{
   display: inline-block;
@@ -39,12 +42,14 @@ span{
   border-radius: 2pc;
 }
 
-
 .abs-center {
   display: flex;
   align-items: center;
   justify-content: center;
  
+}
+#btnInicioSecion{
+  margin-right:  5px;
 }
 
 
@@ -109,29 +114,10 @@ p{
  text-decoration: none;
 }
 
-#confirmarContraseñaDiv{
-  display: none;
-}
 
-#nombresDiv{
-  display: none;
-}
-
-#apellidosDiv{
-  display: none;
-}
-
-#btnRegistrarme{
-  display: none;
-}
-
-#btnCambioInicioSesion{
-  display: none;
-}
-#ulCuentaYContraseñaDiv{
-  text-decoration: none;
-  list-style-type: none; 
-}
 .publicidad_tienda{
   display: inline-block;
+}
+.fromResgistrar{
+  display: none;
 }
