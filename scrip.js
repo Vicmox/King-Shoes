@@ -1,52 +1,38 @@
 
-//Este boton hace que el formulario de registro aparezca en vez del de inicio de sesion
+const usuarios=document.querySelector("#Usuarios");
 
-var btnCambioARegistro = document.getElementById('btnCambioARegistro');
+$("#Usuarios").click(function(event){
+    
+    
+     
+   
+});
 
-btnCambioARegistro.onclick=function(){
-    let textIniciarSesion=document.getElementById('textIniciarSesion');
-    textIniciarSesion.textContent='Registrarse';
-    let confirmarContraseñaDiv = document.getElementById('confirmarContraseñaDiv');
-    confirmarContraseñaDiv.style.display = "block";
-    let nombresDiv = document.getElementById('nombresDiv');
-    nombresDiv.style.display="inline-block";
-    let apellidosDiv = document.getElementById('apellidosDiv');
-    apellidosDiv.style.display="inline-block";
-    let btnEntrar = document.getElementById('btnEntrar');
-    btnEntrar.style.display="none";
-    let btnRegistrarme = document.getElementById('btnRegistrarme');
-    btnRegistrarme.style.display="block";
-    let btnCambioInicioSesion = document.getElementById('btnCambioInicioSesion');
-    btnCambioInicioSesion.style.display="block";
-    let btnCambioARegistro = document.getElementById('btnCambioARegistro');
-    btnCambioARegistro.style.display="none";
-}
 
-//Este boton hace que el formulario de inicio de sesion aparezca en vez del de registro
 
-var btnCambioInicioSesion = document.getElementById('btnCambioInicioSesion');
 
-btnCambioInicioSesion.onclick=function(){
-    let textIniciarSesion=document.getElementById('textIniciarSesion');
-    textIniciarSesion.textContent='Iniciar Sesion';
-    let confirmarContraseñaDiv = document.getElementById('confirmarContraseñaDiv');
-    confirmarContraseñaDiv.style.display = "none";
-    let nombresDiv = document.getElementById('nombresDiv');
-    nombresDiv.style.display="none";
-    let apellidosDiv = document.getElementById('apellidosDiv');
-    apellidosDiv.style.display="none";
-    let btnEntrar = document.getElementById('btnEntrar');
-    btnEntrar.style.display="block";
-    let btnRegistrarme = document.getElementById('btnRegistrarme');
-    btnRegistrarme.style.display="none"; 
-    let btnCambioInicioSesion = document.getElementById('btnCambioInicioSesion');
-    btnCambioInicioSesion.style.display="none";
-    let btnCambioARegistro = document.getElementById('btnCambioARegistro');
-    btnCambioARegistro.style.display="block";
-}
 $("#cuentaAdmin").click(function(event){
     $("#contenedor").load('cuenta/admin.html')
     $("#menu").load('cuenta/menuAdmin.html')
+    fetch('http://localhost:8080/usuarios')
+    .then(response => response.json())
+    .then(data => mostrarUsuarios(data))
+    .catch(error => console.log(error))
+    
+    const mostrarUsuarios=(data)=>{
+        console.log(data)
+        let body=''
+        for(let i=0;i<data.length;i++){
+         body+=`<tr> <td>${data[i].id}</td> <td>${data[i].cedula}</td><td>${data[i].nombre}</td><td>${data[i].apellido}</td> <td>${data[i].correo}</td> <td>${data[i].sexo}</td> <td>${data[i].estado}</td></tr>`
+         
+        }
+        document.getElementById('dataUsuarios').innerHTML=body
+    }
+});
+
+//cargo formulario Registrarse
+$("#rUsuario").click(function(event){
+    $("#contenedor").load('login/login.html')
 });
 
 $("#cuentaTienda").click(function(event){

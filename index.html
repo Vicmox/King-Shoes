@@ -15,8 +15,14 @@
 
 <body>
   <!--Menu-->
+ 
 
   <div class="a" id="menu">
+    <div>
+      <FONT FACE="Impact">
+   <MARQUEE BGCOLOR="#FFFFFF"> BIENVENIDOS A KINGSHOES COLOMBIA  ツツツ</MARQUEE>
+   </FONT>
+     </div>
     <nav class="navbar navbar-expand-lg bg-dark " id="nav">
 
       <div class="container">
@@ -47,7 +53,7 @@
                 aria-expanded="false">
                 NIÑOS
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                 <li><a class="dropdown-item" href="#" id="niño">NIÑO</a></li>
                 <li><a class="dropdown-item" href="#" id="niña">NIÑA</a></li>
                 <li>
@@ -73,7 +79,7 @@
 
           </form>
           <!--Boton Cuenta-->
-          <ul class="nav">
+          <ul class="nav justify-content-center ">
             <li class="nav-item dropdown">
 
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -86,7 +92,7 @@
                 </svg>
               </a>
 
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink" >
                 <li>
                   <button type="button" class="btn  btn-default" data-bs-toggle="modal"
                     data-bs-target="#staticBackdrop">
@@ -147,53 +153,42 @@
           <!-- Modal -->
 
           <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            aria-labelledby="staticBackdropLabel" aria-hidden="true" >
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="textIniciarSesion">Iniciar Sesion</h5>
+                  <div class="col-md-6 offset-md-3">
+                  <h5 class="modal-title" id="textIniciarSesion" >Iniciar Sesion</h5>
+                </div>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form>
-                    <div class="mb-3" id="nombresDiv">
-                      <label for="inputNombre" class="form-label" id="nombres">Nombres</label>
-                      <input class="form-control" id="inputNombre">
+                  <form  id="fromInicio">
+                    
+                    <div class="row mb-3">
+                      <label for="inputEmailInicio" class="col-sm-2 col-form-label">Email</label>
+                      <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmailInicio" required>
+                      </div>
                     </div>
-                    <div class="mb-3" id="apellidosDiv">
-                      <label for="inputApellidos" class="form-label" id="apellidos">Apellidos</label>
-                      <input type="password" class="form-control" id="inputApellidos">
+                    <div class="row mb-3">
+                      <label for="inputPasswordInicio" class="col-sm-2 col-form-label">Password</label>
+                      <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPasswordInicio" required>
+                      </div>
                     </div>
-                    <div class="mb-3" id="correoElectronicoDiv">
-                      <label for="exampleInputEmail1" class="form-label">Correo Electronico </label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text"><span style="color: orange;">We'll never share your email
-                          with anyone else.</span></div>
+                    <div class="abs-center">
+                    <a type="button" class="btn btn-primary" id="btnInicioSecion">Iniciar Sesion</a>
+                    
+                    <a type="button" class="btn btn-primary" id="rUsuario" data-bs-dismiss="modal">Registrarme</a>
                     </div>
-                    <div class="mb-3" id="contraseñaDiv">
-                      <label for="inputContraseña" class="form-label" id="contraseña">Contraseña</label>
-                      <input type="password" class="form-control" id="inputContraseña">
-                    </div>
-                    <div class="mb-3" id="confirmarContraseñaDiv">
-                      <label for="inputConfirmarContraseña" class="form-label" id="confirmarContraseña">Confirmar
-                        Contraseña</label>
-                      <input type="password" class="form-control" id="inputConfirmarContraseña">
-                    </div>
-                    <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="btnEntrar">Entrar</button>
-                    <button type="submit" class="btn btn-primary" id="btnRegistrarme">Registrarme</button>
                   </form>
+                  
                 </div>
                 <div class="modal-footer">
                   <ul id="ulCuentaYContraseñaDiv">
                     <li><a href="#">¿Olvidaste tu contraseña?</a></li>
-
-                    <li><a href="#" type="button" id="btnCambioARegistro">No tienes una cuenta? Registrate ya</a></li>
-                    <li><a href="#" type="button" id="btnCambioInicioSesion">Ya tengo cuenta</a></li>
-                  </ul>
+                   </ul>
                 </div>
               </div>
             </div>
@@ -505,6 +500,8 @@
     crossorigin="anonymous"></script>
 
   <script src="scrip.js"></script>
+  <script src="usuario.js"></script>
+  
 
 
 </body>
