@@ -18,7 +18,7 @@ $("#verUsuarios").click(function(event){
     }
 })
 
-
+/**
 $("#verTiendas").click(function(event){
     $("#contenedorU").load('cuenta/admin.html')
     fetch('http://localhost:8080/tiendas')
@@ -35,10 +35,11 @@ $("#verTiendas").click(function(event){
         document.getElementById('dataUsuarios').innerHTML=body
     }
 })
+*/
 
 
 $("#verProductos").click(function(event){
-    $("#contenedorU").load('cuenta/admin.html') 
+    $("#contenedorU").load('productos/producto.html') 
     fetch('http://localhost:8080/productos')
     .then(response => response.json())
     .then(data => mostrarUsuarios(data))
@@ -48,9 +49,9 @@ $("#verProductos").click(function(event){
         console.log(data)
         let body=''
         for(let i=0;i<data.length;i++){
-            body+=`<tr> <td>${data[i].id}</td> <td>${data[i].nombre}</td><td>${data[i].color}</td><td>${data[i].cantidad}</td> <td>${data[i].correo}</td> <td>${data[i].sexo}</td> <td>${data[i].estado}</td><td><button class="btn btn-warning" id="editarUsuarios">Editar</button></td> <td><button class="btn btn-danger" onclick="eliminarU(${data[i].id}) id="eliminarUsuarios">Eliminar</button></td></tr>`
+            body+=`<tr> <td>${data[i].id}</td> <td>${data[i].id_tienda}</td><td>${data[i].nombre}</td><td>${data[i].color}</td> <td>${data[i].talla}</td> <td>${data[i].precio}</td> <td><button class="btn btn-warning" id="editarUsuarios">Editar</button></td> <td><button class="btn btn-danger" onclick="eliminarU(${data[i].id}) id="eliminarUsuarios">Eliminar</button></td></tr>`
         }
-        document.getElementById('dataUsuarios').innerHTML=body
+        document.getElementById('dataProductos').innerHTML=body
     }
 })
 
