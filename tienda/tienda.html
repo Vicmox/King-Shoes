@@ -11,38 +11,46 @@
 <body>
   <div class="container">
 
-    <h1>PRODUCTOS</h1>
-    <form class="col-6">
-      <label for="">Nombre del Producto</label>
-      <input type="text" class="form-control" id="nombre" for="inputNombre">
-      <label for="">Precio</label>
-      <input type="Numbre" class="form-control" id="precio" required>
-      <label for="">Stock</label>
-      <input type="Number" class="form-control" id="cantidad" required>
-      <label for="">Color</label>
-      <input type="text" class="form-control" id="color" required>
-      <label for="">Talla</label>
-      <input type="Numbre" class="form-control" id="talla" required>
-      <div class="row mt-3"></div>
-      <button type="button" class="btn btn-primary" id="agregar_p">Agregar</button>
-      <button type="button" class="btn btn-primary" id="guardar">Guardar</button>
+
+    <div class="container mt-3">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Ver Tiendas</li>
+      </ol>
+      <h2>Tiendas</h2>
+      <p>tiendas registradas</p>
+    </div>
+    </form>
+    <div class="col-12 mt-3" id="productos">
+      <table class="table table-striped" id="lista">
+        <thead>
+        <tr>
+          <td>Id</td>
+          <td>Id_usuario</td>
+          <td>Nombre</td>
+          <td>Descripcion</td>
+          <td>Accion</td>
+          <td>Accion</td>
+  
+  
+        </tr>
+        </thead>
+        <tbody id="dataTiendas">
+  
+        </tbody>
+      </table>
+    </div>
+    <a href="formulario.html" class="btn btn-success" id="agregar">Agregar</a>
+    </div>
+    <div class="col-10 text-right" >
+     
+    </div>
+  
   </div>
-  </form>
-  <div class="container-flex" id="productos">
-    <table class="table table-striped" id="lista">
-      <tr>
-        <td scope="col">Nombre</td>
-        <td scope="col">Precio</td>
-        <td scope="col">Stock</td>
-        <td scope="col">Color</td>
-        <td scope="col">Talla</td>
-        <td scope="col">Total</td>
-        <td >Acciones</td>
-      </tr>
-    </table>
-  </div>
+  
 
   </div>
+
   <script src="scrip.js"></script>
 
 </body>

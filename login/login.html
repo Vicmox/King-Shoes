@@ -10,100 +10,114 @@
 
 <body>
 
-  <div class="col-md-8 offset-md-2">
-    <h1>FORMULARIO DE REGISTRO</h1>
-    <form id="fromResgistrar">
-      <div class="row mb-3">
-
-        <label for="inputCedula" class="col-sm-2 col-form-label">Cedula</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputCedula" required>
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  
+  <body>
+  
+    <div class="col-md-8 offset-md-2">
+      <h1>FORMULARIO DE REGISTRO</h1>
+      <form id="fromResgistrar">
+        <div class="row mb-3">
+  
+          <label for="inputCedula" class="col-sm-2 col-form-label">Cedula</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputCedula" required>
+          </div>
         </div>
-      </div>
-      <div class="row mb-3">
-        <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputNombre" required>
+        <div class="row mb-3">
+          <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputNombre" required>
+          </div>
         </div>
-      </div>
-      <div class="row mb-3">
-        <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputApellidos" required>
+        <div class="row mb-3">
+          <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputApellidos" required>
+          </div>
         </div>
-      </div>
-      <div class="row mb-3">
-
-        <label for=" " class="col-sm-2 col-form-label">Genero</label>
-        <div class="col-sm-10">
-          <select class="form-select" id="inlineFormSelectPref">
-            <option value="1" selected>Masculino</option>
-            <option value="2">Femenino</option>
-            <option value="3">Otro</option>
-          </select>
+        <div class="row mb-3">
+  
+          <label for=" " class="col-sm-2 col-form-label">Genero</label>
+          <div class="col-sm-10">
+            <select class="form-select" id="inlineFormSelectPref">
+              <option value="1" selected>Masculino</option>
+              <option value="2">Femenino</option>
+              <option value="3">Otro</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="row mb-3">
-        <label for="inputFecha" class="col-sm-2 col-form-label">Fecha Nacimiento</label>
-        <div class="col-sm-10">
-          <input type="date" class="form-control" id="inputFecha" required>
-
+        <div class="row mb-3">
+          <label for="inputFecha" class="col-sm-2 col-form-label">Fecha Nacimiento</label>
+          <div class="col-sm-10">
+            <input type="date" class="form-control" id="inputFecha" required>
+  
+          </div>
         </div>
-      </div>
-      <div class="row mb-3">
-        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-        <div class="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail" required>
+        <div class="row mb-3">
+          <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail" required>
+          </div>
         </div>
-      </div>
-      <div class="row mb-3">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-        <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword" required>
+        <div class="row mb-3">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword" required>
+          </div>
         </div>
-      </div>
-
-      <button type="button" class="btn btn-primary" id="btnRegistrarU">Registrarme</button>
-    </form>
-  </div>
-  <script>
-    const guardar = document.getElementById('btnRegistrarU')
-
-    var select = document.getElementById("inlineFormSelectPref");
-    var value = select.value;
-    var sexo = select.options[select.selectedIndex].text;
-
-    guardar.addEventListener('click', () => {
-      var cedula = document.getElementById("inputCedula").value;
-      var nombre = document.getElementById("inputNombre").value;
-      var apellido = document.getElementById('inputApellidos').value;
-      var correo = document.getElementById('inputEmail').value;
-      var contraseña = document.getElementById('inputPassword').value;
-      var fechaNacimiento = document.getElementById('inputFecha').value;
-      const newUser = {
-        cedula: cedula,
-        nombre: nombre,
-        apellido: apellido,
-        fecha_nacimiento: fechaNacimiento,
-        correo: correo,
-        contraseña: contraseña,
-        sexo: sexo,
-        id_estado: '1',
-        id_rol: '1'
-      }
-      console.log(JSON.stringify(newUser))
-      fetch('http://localhost:8080/usuarios/save', {
-        method: 'POST',
-        body: JSON.stringify(newUser),
-        headers: {
-          "Content-type": "application/json"
+  
+        <button type="button" class="btn btn-primary" id="btnRegistrarU">Registrarme</button>
+      </form>
+    </div>
+    <script>
+      const guardar = document.getElementById('btnRegistrarU')
+  
+      var select = document.getElementById("inlineFormSelectPref");
+      var value = select.value;
+      var sexo = select.options[select.selectedIndex].text;
+  
+      guardar.addEventListener('click', () => {
+        var cedula = document.getElementById("inputCedula").value;
+        var nombre = document.getElementById("inputNombre").value;
+        var apellido = document.getElementById('inputApellidos').value;
+        var correo = document.getElementById('inputEmail').value;
+        var contraseña = document.getElementById('inputPassword').value;
+        var fechaNacimiento = document.getElementById('inputFecha').value;
+        const newUser = {
+          cedula: cedula,
+          nombre: nombre,
+          apellido: apellido,
+          fecha_nacimiento: fechaNacimiento,
+          correo: correo,
+          contraseña: contraseña,
+          sexo: sexo,
+          id_estado: '1',
+          id_rol: '1'
         }
-
-      }).then(res => res.json())
-        .then(user => console.log(user))
-
-    })
-  </script>
+        console.log(JSON.stringify(newUser))
+        fetch('http://localhost:8080/usuarios/save', {
+          method: 'POST',
+          body: JSON.stringify(newUser),
+          headers: {
+            "Content-type": "application/json"
+          }
+  
+        }).then(res => res.json())
+          .then(user => console.log(user))
+  
+      })
+    </script>
 </body>
+
+<script src="scrip.js"></script>
 
 </html>

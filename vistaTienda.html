@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="admin.css">
+    <title>KingShoes</title>
+</head>
+
+<body>
+
+    <div class="d-flex">
+        <div id="slidebar-container" class="bg-primary">
+            <div class="logo">
+                <h4 class="text-light font-weigth-bold">  <a class="text-light text-decoration-none" href="vistaTienda.html">Tienda</a></h4>
+            </div>
+            <div class="menu">
+                <div>
+                    <ul class="d-block p-3 ">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <ion-icon class="mr-3 lead" name="person"></ion-icon> Productos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li> <a id="" href="#" class="dropdown-item">Registrar un producto</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!--Tienda-->
+                <ul class="d-block p-3 ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <ion-icon name="appstore"></ion-icon> Inventario
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a id="verTiendas" class="dropdown-item" href="#">Ver tiendas</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <a href="#" class="d-block p-3 text-light">
+                    <ion-icon name="settings"></ion-icon>Congifuracion
+                </a>
+
+                <a href="index.html" class="d-block p-3 text-light">
+                    <ion-icon name="settings"></ion-icon>Cerrar Sesion
+                </a>
+
+            </div>
+        </div>
+
+
+        <div class="w-100">
+            <nav class="navbar navbar-expand-lg bg-light border-bottom">
+                <div class="container-fluid">
+                    <div>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/logo.jpg" alt="Logo" width="50" height="35"
+                                class="d-inline-block align-text-top" id="logo_inicio">
+                            <h4> King Shoes</h4>
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                            </form>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="contenedorU m-2 p-2" id="contenedorU">
+                <section class="py-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h2 class="font-weight-bold mb-0">Bienvenido</h2>
+                                <p class="lead text-muted">Revisa la ultima informacion de tu tienda</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <button class="btn btn-primary">Descargar reporte</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="container">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="col-lg-3 d-flex stat my-3">
+                                        <div class="mx-auto">
+                                            <h6 class="text-muted">Ingresos Mensuales</h6>
+                                            <h3 class="font-weight-bold">$30.0000.0000</h3>
+                                            <h6 class="text-success">
+                                                <ion-icon name="checkmark-circle"></ion-icon>50.50%
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 d-flex stat my-3">
+                                        <div class="mx-auto">
+                                            <h6 class="text-muted">Productos Activos</h6>
+                                            <h3 class="font-weight-bold">300</h3>
+                                            <h6 class="text-success">
+                                                <ion-icon name="checkmark-circle"></ion-icon>29.50%
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 d-flex stat my-3">
+                                        <div class="mx-auto">
+                                            <h6 class="text-muted">No.Usuarios</h6>
+                                            <h3 class="font-weight-bold">60</h3>
+                                            <h6 class="text-success">
+                                                <ion-icon name="checkmark-circle"></ion-icon>50.50%
+                                            </h6>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-3 d-flex stat my-3">
+                                        <div class="mx-auto">
+                                            <h6 class="text-muted">No.Tiendas</h6>
+                                            <h3 class="font-weight-bold">10</h3>
+                                            <h6 class="text-success">
+                                                <ion-icon name="checkmark-circle"></ion-icon>50.50%
+                                            </h6>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="container bg-grey">
+                        <div class="row">
+                            <div class="col-lg-8 my-3">
+                                <div class="card rounded-0">
+                                    <div class="card-header bg-light">
+                                        <h6 class="font-weight-bold mb-0">Numero de Tiendas registradas</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="myChart"></canvas>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 my-3">
+
+                                <div class="card rounded-0">
+                                    <div class="card-header bg-light">
+                                        <h6 class="font-weight-bold mb-0">Ventas recientes</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex border-bottom py-2">
+                                            <div class="d-flex  mx-3">
+                                                <h3 class="mb-0 align-self-center">
+                                                    <ion-icon name="pricetags"></ion-icon>
+                                                </h3>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <h6 class="d-inline-block mb-0">$150.000</h6><span
+                                                    class="badge text-bg-success mx-2">10% descuento</span>
+                                                <small class="d-block tetx-muted">Air for one</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex border-bottom py-2">
+                                            <div class="d-flex  mx-3">
+                                                <h3 class="mb-0 align-self-center">
+                                                    <ion-icon name="pricetags"></ion-icon>
+                                                </h3>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <h6 class="d-inline-block mb-0">$160.000</h6><span
+                                                    class="badge text-bg-success mx-2">15% descuento</span>
+                                                <small class="d-block tetx-muted">Adidas ZX</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex border-bottom py-2 mb-3">
+                                            <div class="d-flex  mx-3">
+                                                <h3 class="mb-0 align-self-center">
+                                                    <ion-icon name="pricetags"></ion-icon>
+                                                </h3>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <h6 class="d-inline-block mb-0">$190.000</h6><span
+                                                    class="badge text-bg-success mx-2">17% descuento</span>
+                                                <small class="d-block tetx-muted">Versace chain</small>
+                                            </div>
+                                        </div>
+                                             <button class="btn btn-primary w-100">Ver Todo</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo ', 'Abril', 'Junio', 'Julio'],
+                datasets: [{
+                    label: '# numero de tiendas registradas',
+                    data: [10, 1, 3, 5, 2, 3],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+    </script>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="admin.js"></script>
+    <script src="usuario.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,3 @@
-
-
-
 $("#verUsuarios").click(function(event){
     $("#contenedorU").load('cuenta/admin.html')
     fetch('http://localhost:8080/usuarios')
@@ -53,9 +50,3 @@ $("#verProductos").click(function(event){
         document.getElementById('dataUsuarios').innerHTML=body
     }
 })
-
-
-
-
-
-

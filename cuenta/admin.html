@@ -5,15 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="./admin.css">
   <title>Document</title>
 </head>
 
 <body>
-  
+
+  <div class="container mt-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active">Ver Usuarios</li>
+    </ol>
+    <h2>Usuarios</h2>
+  </div>
   </form>
   <div class="col-12 mt-3" id="productos">
-    <table class="table table-striped" id="lista">
+    <table class="table table-dark table-striped" id="lista">
       <thead>
       <tr>
         <td>Id</td>
@@ -23,6 +33,8 @@
         <td>Correo</td>
         <td>Sexo</td>
         <td>Estado</td>
+        <td>Accion</td>
+        <td>Accion</td>
 
 
       </tr>
@@ -32,11 +44,13 @@
       </tbody>
     </table>
   </div>
-
+  <a href="formulario.html" class="btn btn-success" id="agregar">Agregar</a>
   </div>
   <div class="col-10 text-right" >
-
+   
   </div>
+
+</div>
   
 
 
