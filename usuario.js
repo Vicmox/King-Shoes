@@ -12,11 +12,17 @@ $("#verUsuarios").click(function(event){
         console.log(data)
         let body=''
         for(let i=0;i<data.length;i++){
-            body+=`<tr> <td>${data[i].id}</td> <td>${data[i].cedula}</td><td>${data[i].nombre}</td><td>${data[i].apellido}</td> <td>${data[i].correo}</td> <td>${data[i].sexo}</td> <td>${data[i].estado}</td><td><button class="btn btn-warning" id="editarUsuarios">Editar</button></td> <td><button class="btn btn-danger" onclick="eliminarU(${data[i].id}) id="eliminarUsuarios">Eliminar</button></td></tr>`
+            body+=`<tr> <td>${data[i].id}</td> <td>${data[i].cedula}</td><td>${data[i].nombre}</td><td>${data[i].apellido}</td> <td>${data[i].correo}</td> <td>${data[i].sexo}</td> <td>${data[i].estado}</td> <td><button class="btn btn-warning" id="editarUsuarios">Editar</button></td> <td><button class="btn btn-danger" onclick="eliminarU(${data[i].id}) id="eliminarUsuarios">Eliminar</button></td></tr>`
         }
         document.getElementById('dataUsuarios').innerHTML=body
     }
 })
+
+
+$("#editarUsuarios").click(function(event){
+    $("#contenedorU").load('login/login.html')
+});
+
 
 /**
 $("#verTiendas").click(function(event){
@@ -42,10 +48,10 @@ $("#verProductos").click(function(event){
     $("#contenedorU").load('productos/producto.html') 
     fetch('http://localhost:8080/productos')
     .then(response => response.json())
-    .then(data => mostrarUsuarios(data))
+    .then(data => mostrarProductos(data))
     .catch(error => console.log(error))
     
-    const mostrarUsuarios=(data)=>{
+    const mostrarProductos=(data)=>{
         console.log(data)
         let body=''
         for(let i=0;i<data.length;i++){

@@ -75,8 +75,8 @@ $("#hombre").click(function(event){
     $("#contenedor").load('productos/hombre.html')
 })
 
-$("#verOrden").click(function(event){
-    $("#contenedor").load('carrito/resumenpedido.html')
+$("#ver").click(function(event){
+    $("#contenedor").load('productos/detalleproducto.html')
 })
 
 $("#agregarProducto").click(function(event){
@@ -84,6 +84,10 @@ $("#agregarProducto").click(function(event){
 })
 
 $("#detalle").click(function(event){
+    $("#contenedor").load('productos/detalleproducto.html')
+})
+
+$("#registrarProducto").click(function(event){
     $("#contenedor").load('productos/detalleproducto.html')
 })
 

@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
    
     <!--Boton Filtro-->
-   
+   <div>
     <div class="flitro abs-center mt-2" >
         <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">APLICAR FILTROS
@@ -144,7 +136,9 @@
         </div>
       </div>
     </div>
-    <div class="container" id="contenedorproductos">
+
+    <div class="row" id="contenedorProductos">
+      <div class="row  " id="categoriaProductos"></div>
       <h2 class="h-4 m-4">Categoria de hombre</h2>
     
       <div class="row text-center row-cols-4">
@@ -233,7 +227,7 @@
               <p class="card-text">Nombre del producto.</p>
             </div>
             <div class="card-footer">
-              <a href="productohome.html" class="btn btn-success">Ver producto</a>
+              <a  class="btn btn-success" id="ver">Ver producto</a>
             </div>
           </div>
         </div>
@@ -247,7 +241,7 @@
               <p class="card-text">Nombre del producto.</p>
             </div>
             <div class="card-footer">
-              <a href="productohome.html" class="btn btn-success">Ver producto</a>
+              <a href="#" class="btn btn-success">Ver producto</a>
             </div>
           </div>
         </div>
@@ -262,28 +256,28 @@
               <p class="card-text">Nombre del producto.</p>
             </div>
             <div class="card-footer">
-              <a href="productohome.html" class="btn btn-success">Ver producto</a>
+              <a href="#" class="btn btn-success">Ver producto</a>
             </div>
           </div>
         </div>
-    
-    
+        </div>
+  
+      </div>
+
+      
+
+      
         
     
-    
-    
-    
+   
+      <script src="categoria.js"></script>
+      <script src="../script.js"></script>
       </div>
     </div>
     
     
     
     
-    </div>
+  
     
-    <script src="scrip.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-</body>
-</html>
+  

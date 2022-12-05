@@ -12,21 +12,21 @@
 
   <!DOCTYPE html>
   <html lang="en">
-  
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
   </head>
-  
+
   <body>
-  
+
     <div class="col-md-8 offset-md-2">
       <h1>FORMULARIO DE REGISTRO</h1>
       <form id="fromResgistrar">
         <div class="row mb-3">
-  
+
           <label for="inputCedula" class="col-sm-2 col-form-label">Cedula</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" id="inputCedula" required>
@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="row mb-3">
-  
+
           <label for=" " class="col-sm-2 col-form-label">Genero</label>
           <div class="col-sm-10">
             <select class="form-select" id="inlineFormSelectPref">
@@ -59,7 +59,7 @@
           <label for="inputFecha" class="col-sm-2 col-form-label">Fecha Nacimiento</label>
           <div class="col-sm-10">
             <input type="date" class="form-control" id="inputFecha" required>
-  
+
           </div>
         </div>
         <div class="row mb-3">
@@ -74,17 +74,49 @@
             <input type="password" class="form-control" id="inputPassword" required>
           </div>
         </div>
-  
-        <button type="button" class="btn btn-primary" id="btnRegistrarU">Registrarme</button>
-      </form>
+
+       
+          <div class="mb-2" id="liveAlertPlaceholder">
+            <button type="button" class="btn btn-primary"
+            id="btnRegistrarU">Registrarme</button>
+          </div>
+    </div>
+
+
+    <script>
+      const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+      const alert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+      }
+
+      const alertTrigger = document.getElementById('btnRegistrarU')
+      if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+          alert('Te has registrado con exito', 'success')
+        })
+      }
+
+    </script>
+
+
+    </form>
     </div>
     <script>
       const guardar = document.getElementById('btnRegistrarU')
-  
+
       var select = document.getElementById("inlineFormSelectPref");
       var value = select.value;
       var sexo = select.options[select.selectedIndex].text;
-  
+
       guardar.addEventListener('click', () => {
         var cedula = document.getElementById("inputCedula").value;
         var nombre = document.getElementById("inputNombre").value;
@@ -110,14 +142,14 @@
           headers: {
             "Content-type": "application/json"
           }
-  
+
         }).then(res => res.json())
           .then(user => console.log(user))
-  
+
       })
     </script>
-</body>
+  </body>
 
-<script src="scrip.js"></script>
+  <script src="scrip.js"></script>
 
-</html>
+  </html>
