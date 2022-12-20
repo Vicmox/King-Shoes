@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="container">
+<div class="container">
 
 
     <div class="container mt-3">
@@ -17,7 +6,7 @@
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
         <li class="breadcrumb-item active">Ver Tiendas</li>
       </ol>
-      <h2>Tiendas <ion-icon name="appstore"></ion-icon> </h2>
+      <h2>Productos  <ion-icon name="pricetags"></ion-icon>  </h2>
     </div>
     </form>
     <div class="col-12 mt-3" id="productos">
@@ -25,14 +14,18 @@
         <thead>
         <tr>
           <td>Id</td>
-          <td>Nombre</td>
+          <!-- <td>Id_tienda</td> -->
+          <td>nombre</td>
+          <td>color</td>
+          <td>talla</td>
+          <td>precio</td>
           <td>Accion</td>
           <td>Accion</td>
   
   
         </tr>
         </thead>
-        <tbody id="dataTiendas">
+        <tbody id="dataProductos">
   
         </tbody>
       </table>
@@ -49,7 +42,3 @@
   </div>
 
   <script src="scrip.js"></script>
-
-</body>
-
-</html>

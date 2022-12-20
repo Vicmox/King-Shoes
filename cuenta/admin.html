@@ -5,26 +5,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="./admin.css">
   <title>Document</title>
 </head>
 
 <body>
-  
+
+  <div class="container mt-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active">Ver Usuarios</li>
+    </ol>
+    <h2>Usuarios<ion-icon class="mr-3 lead" name="person"></ion-icon></h2>
+  </div>
   </form>
   <div class="col-12 mt-3" id="productos">
-    <table class="table table-striped" id="lista">
+    <table class="table  table-striped" id="lista">
       <thead>
       <tr>
         <td>Id</td>
-        <td>Cedula</td>
         <td>Nombre</td>
-        <td>Apellido</td>
         <td>Correo</td>
-        <td>Sexo</td>
-        <td>Estado</td>
-
-
+        <td>Username</td>
+        <td>Contraseña</td>
+        <td>Accion</td>
+        <td>Accion</td>
       </tr>
       </thead>
       <tbody id="dataUsuarios">
@@ -32,11 +40,13 @@
       </tbody>
     </table>
   </div>
-
+  <a href="formulario.html" class="btn btn-success" id="agregar">Agregar</a>
   </div>
   <div class="col-10 text-right" >
-
+   
   </div>
+
+</div>
   
 
 
@@ -44,7 +54,8 @@
 
  
   
-
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

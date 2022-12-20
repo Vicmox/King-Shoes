@@ -4,16 +4,21 @@ const usuarios=document.querySelector("#Usuarios");
 $("#Usuarios").click(function(event){
     
     
-     
-   
+});
+
+
+$("#mostrarAdmin").click(function(event){
+    $("#contenedorU").load('cuenta/admin.html')
 });
 
 
 
-
+/**
 $("#cuentaAdmin").click(function(event){
     $("#contenedor").load('cuenta/admin.html')
     $("#menu").load('cuenta/menuAdmin.html')
+   
+    /**
     fetch('http://localhost:8080/usuarios')
     .then(response => response.json())
     .then(data => mostrarUsuarios(data))
@@ -23,42 +28,55 @@ $("#cuentaAdmin").click(function(event){
         console.log(data)
         let body=''
         for(let i=0;i<data.length;i++){
-         body+=`<tr> <td>${data[i].id}</td> <td>${data[i].cedula}</td><td>${data[i].nombre}</td><td>${data[i].apellido}</td> <td>${data[i].correo}</td> <td>${data[i].sexo}</td> <td>${data[i].estado}</td></tr>`
+         body+=`<tr> <td>${data[i].id}</td> <td>${data[i].cedula}</td><td>${data[i].nombre}</td><td>${data[i].apellido}</td> <td>${data[i].correo}</td> <td>${data[i].sexo}</td> <td>${data[i].estado}</td><td><button class="btn btn-warning" id="editarUsuarios">Editar</button></td> <td><button class="btn btn-danger" onclick="eliminarU(${data[i].id}) id="eliminarUsuarios">Eliminar</button></td></tr>`
          
         }
         document.getElementById('dataUsuarios').innerHTML=body
     }
+
 });
+  
+*/
 
 //cargo formulario Registrarse
+
+ 
 $("#rUsuario").click(function(event){
     $("#contenedor").load('login/login.html')
 });
+
 
 $("#cuentaTienda").click(function(event){
     $("#contenedor").load('tienda/tienda.html')
     $("#menu").load('tienda/menuTienda.html')
 });
+
+
 $("#hombre").click(function(event){
     $("#contenedor").load('categoria/categoria.html')
 })
+
 $("#mujer").click(function(event){
     $("#contenedor").load('categoria/categoria.html')
 })
+
 $("#niño").click(function(event){
     $("#contenedor").load('categoria/categoria.html')
 })
+
+
 
 $("#carrito").click(function(event){
     $("#contenedor").load('carrito/carrito.html')
 })
 
+
 $("#hombre").click(function(event){
     $("#contenedor").load('productos/hombre.html')
 })
 
-$("#verOrden").click(function(event){
-    $("#contenedor").load('carrito/resumenpedido.html')
+$("#ver").click(function(event){
+    $("#contenedor").load('productos/detalleproducto.html')
 })
 
 $("#agregarProducto").click(function(event){
@@ -69,9 +87,13 @@ $("#detalle").click(function(event){
     $("#contenedor").load('productos/detalleproducto.html')
 })
 
+$("#registrarProducto").click(function(event){
+    $("#contenedor").load('productos/detalleproducto.html')
+})
 
 
 
+/**
 var boton = document.getElementById('agregar_p');
 var guardar = document.getElementById('guardar');
 var lista = document.getElementById('lista');
@@ -155,7 +177,7 @@ function cantidad(row){
     celda[3].innerHTML=data[row].total;
     sumar();
 }
-
+*/
 
 
 
