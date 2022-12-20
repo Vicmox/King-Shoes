@@ -75,11 +75,12 @@
           </div>
         </div>
 
-       
-          <div class="mb-2" id="liveAlertPlaceholder">
-            <button type="button" class="btn btn-primary"
-            id="btnRegistrarU">Registrarme</button>
-          </div>
+
+        <div class="mb-2" id="liveAlertPlaceholder">
+          <button type="button" class="btn btn-primary" id="btnRegistrarU">Registrarme</button>
+          <button type="button" class="btn btn-primary" id="btnVerifcarCuenta">Enviar Correo confirmacion</button>
+        </div>
+
     </div>
 
 
@@ -101,7 +102,7 @@
       const alertTrigger = document.getElementById('btnRegistrarU')
       if (alertTrigger) {
         alertTrigger.addEventListener('click', () => {
-          alert('Te has registrado con exito', 'success')
+          alert('Te has registrado con exito , vuelve a presionar el boton de registrarte si quieres recibir un correo de confirmacion', 'success')
         })
       }
 
@@ -112,29 +113,39 @@
     </div>
     <script>
       const guardar = document.getElementById('btnRegistrarU')
-
+      const verificar = document.getElementById("btnVerifcarCuenta")
       var select = document.getElementById("inlineFormSelectPref");
       var value = select.value;
       var sexo = select.options[select.selectedIndex].text;
 
       guardar.addEventListener('click', () => {
-        var cedula = document.getElementById("inputCedula").value;
+        var id = document.getElementById("inputCedula").value;
         var nombre = document.getElementById("inputNombre").value;
-        var apellido = document.getElementById('inputApellidos').value;
-        var correo = document.getElementById('inputEmail').value;
-        var contraseña = document.getElementById('inputPassword').value;
+        var username = document.getElementById('inputApellidos').value;
+        var email = document.getElementById('inputEmail').value;
+        var password = document.getElementById('inputPassword').value;
         var fechaNacimiento = document.getElementById('inputFecha').value;
         const newUser = {
-          cedula: cedula,
+          id: id,
           nombre: nombre,
-          apellido: apellido,
-          fecha_nacimiento: fechaNacimiento,
-          correo: correo,
-          contraseña: contraseña,
-          sexo: sexo,
-          id_estado: '1',
-          id_rol: '1'
+          email: email,
+          username: username,
+          password: password,
         }
+
+        /**
+        fetch('http://localhost:8080/usuarios/enviarCorreo/' + id, {
+          method: "POST",
+          body: JSON.stringify(newUser),
+          headers: {
+            "Content-type": "application/json"
+          }
+
+
+        }).then(response => response.json())
+          .then(user => console.log(user))
+        */
+        //guarda el usuario en la bd
         console.log(JSON.stringify(newUser))
         fetch('http://localhost:8080/usuarios/save', {
           method: 'POST',
@@ -146,7 +157,62 @@
         }).then(res => res.json())
           .then(user => console.log(user))
 
+
+
+
+          
+          fetch('http://localhost:8080/usuarios')
+          .then(response => response.json())
+          .then(data => enviarCorreo(data))
+          .catch(error => console.log(error))
+
+        const enviarCorreo=(data)=>{
+        console.log(data)
+        fetch('http://localhost:8080/usuarios/enviarCorreo/' + id, {
+          method: "POST",
+          body: JSON.stringify(""),
+          headers: {
+            "Content-type": "application/json"
+          }
+
+
+        }).then(response => response.json())
+
+        
+
+        
+
+        
+       }
+
       })
+
+      /**
+      verificar.addEventListener('click', () => {
+
+        fetch('http://localhost:8080/usuarios/enviarCorreo/' + id, {
+          method: "POST",
+          body: JSON.stringify(""),
+          headers: {
+            "Content-type": "application/json"
+          }
+
+
+        }).then(response => response.json())
+          .then(user => console.log(user))
+      })
+
+      */
+
+
+
+
+
+
+
+
+
+
     </script>
   </body>
 
